@@ -1,0 +1,84 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 8790502246,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I have started Browser",
+            "match": {
+              "location": "Common_Step.i_have_started_Browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1090966989,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I sign in",
+            "match": {
+              "location": "Common_Step.i_sign_in()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "line": 8,
+        "name": "Login to DropBox",
+        "description": "",
+        "id": "dropbox-login;login-to-dropbox",
+        "after": [
+          {
+            "result": {
+              "duration": 525777,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TestEnvironment.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10563089970,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I redirect to appropriate Page",
+            "match": {
+              "location": "LoginLogout.i_redirect_to_appropriate_Page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 7,
+            "name": "@DropBoxLogin"
+          }
+        ]
+      }
+    ],
+    "name": "DropBox Login",
+    "description": "",
+    "id": "dropbox-login",
+    "keyword": "Feature",
+    "uri": "Features/Sanity/LoginLogout.feature"
+  }
+]

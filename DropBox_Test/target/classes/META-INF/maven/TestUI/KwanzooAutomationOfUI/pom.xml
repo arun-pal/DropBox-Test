@@ -1,0 +1,107 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>TestUI</groupId>
+  <artifactId>KwanzooAutomationOfUI</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>KwanzooAutomationOfUI</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <build>
+<plugins>
+    <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+            <fork>true</fork>
+        <executable>C:\Program Files\Java\jdk1.8.0_151\bin\javac.exe</executable>
+    </configuration>
+</plugin>
+
+
+<plugin>
+    <groupId>com.trivago.rta</groupId>
+    <artifactId>cluecumber-report-plugin</artifactId>
+    <version>Check the version number above</version>
+    <executions>
+        <execution>
+            <id>report</id>
+            <phase>post-integration-test</phase>
+            <goals>
+                <goal>reporting</goal>
+            </goals>
+        </execution>
+    </executions>
+    <configuration>
+        <sourceJsonReportDirectory>${project.build.directory}/cucumber-report</sourceJsonReportDirectory>
+        <generatedHtmlReportDirectory>${project.build.directory}/generated-report</generatedHtmlReportDirectory>
+    </configuration>    
+</plugin>
+
+</plugins>
+</build>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.trivago.rta/cluecumber-report-plugin -->
+<dependency>
+    <groupId>com.trivago.rta</groupId>
+    <artifactId>cluecumber-report-plugin</artifactId>
+    <version>1.3.0</version>
+</dependency>
+    <dependency>
+      <groupId>info.cukes</groupId>
+     <artifactId>cucumber-junit</artifactId>
+     <version>1.2.3</version>
+     <scope>test</scope>
+ </dependency>
+    <dependency>
+     <groupId>info.cukes</groupId>
+     <artifactId>cucumber-java</artifactId>
+     <version>1.2.3</version>
+     <scope>test</scope>
+ </dependency>
+  <dependency>
+     <groupId>info.cukes</groupId>
+     <artifactId>cucumber-picocontainer</artifactId>
+     <version>1.2.3</version>
+    <scope>test</scope>
+ </dependency>
+ <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-server</artifactId>
+        <version>3.14.0</version>
+    </dependency>
+<dependency>
+    <groupId>com.vimalselvam</groupId>
+    <artifactId>cucumber-extentsreport</artifactId>
+    <version>2.0.5</version>
+</dependency>
+<dependency>
+    <groupId>com.relevantcodes</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>2.40.2</version>
+</dependency>
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>3.0.7</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+	<groupId>log4j</groupId>
+	<artifactId>log4j</artifactId>
+	<version>1.2.17</version>
+</dependency>
+</dependencies>
+</project>
