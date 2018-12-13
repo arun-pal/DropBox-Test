@@ -10,7 +10,7 @@ public class PropertyManager {
 	static{
 		FileInputStream fin =  null;
 		// Path where Config.Property file is located.
-		File file= new File("/home/arun/eclipse1/workspace/DropBox_Test/src/test/resources/Config.properties");
+		File file= new File("/home/eclipse1/workspace/DropBox_Test/src/test/resources/Config.properties");
 		try {
 			fin = new FileInputStream(file);
 		} catch (FileNotFoundException e) {
